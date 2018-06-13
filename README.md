@@ -9,6 +9,9 @@ That is why it should not be used with any clinet-side security featuers (it sho
 
 Image exposes standard port 25 for incoming messages. If any other port needed, change it in Dockerfile and it will work fine.
 
+Etc and templates directories are for adding files if you are migrating Postfix from linux install to Docker, or from server to server. Etc directory should use only static, not changable files, and templates files that could be changed, like "main.cf" configuration.
+This is great if you have a lot of changes or you are testing differenet configurations.
+
 To run the container, you first need to build image and then run it
 ```
 docker build -t alpine-postfix .
