@@ -23,15 +23,14 @@ You can now send emails by using localhost:25 as your SMTP server address.
 You can test it via telnet. (just don't forget "." at the end)
 
 ```
-$ telnet localhost 25 
-$ MAIL FROM: goran.kelekovic@gmail.com
-$ RCPT TO: goran.kelekovic@gmail.com
-$ data
-$ SUBJECT: Postfix Test
-$
-$ Hi,
-$ Postfix test mail.
-$ Admin
-$ .
+telnet localhost 25 
+MAIL FROM: goran.kelekovic@gmail.com
+RCPT TO: goran.kelekovic@gmail.com
+data
+SUBJECT: Postfix Test
+Hi,
+Postfix test mail.
+Admin
+.
 ```
 
